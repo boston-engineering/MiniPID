@@ -77,7 +77,7 @@ These create the basic PID, allowing for further configuration. Generally, you i
 
 Tuning PID systems is out of scope of this readme, but a good examples can be found all over the internet. 
 
-#### `SetF(double F)`
+#### `setF(double F)`
 Feed-Forward is a 4th system variable that is very helpful on systems with a target velocity, or other systems where an on-target system results in continous motion. Feed forward is not helpful on positional control systems, or other systems where being on target results in halted (or small cyclic) motion.
 
 Conceptually, Feed-forward defines a "best guess" as to what the system output should be for a given setpoint value. Feed forward does not consider what the system is _actually_ doing, and a system driven solely by feed-forward is actually an open-loop system. Mathematically, a feed-forward only system is equivilent to `output=setpoint*F`. 
